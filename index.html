@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fit Academ</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+
+        <header class="logo-header">
+            <div class="logo">
+                <span class="icon">🏋️</span>
+                <span class="text">Fit Academ</span>
+            </div>
+        </header>
+
+        <!-- Login -->
+        <div id="login-div">
+            <h2>Login</h2>
+            <input type="text" id="usuario" placeholder="Digite seu usuário">
+            <input type="password" id="senha" placeholder="Digite sua senha">
+            <button onclick="fazerLogin()">Entrar</button>
+        </div>
+
+        <!-- Dados do usuário -->
+        <div id="dados-div" class="hidden">
+            <h2>Seus Dados</h2>
+            <input type="text" id="nome" placeholder="Digite seu nome">
+            <input type="number" id="peso" placeholder="Peso (kg)" oninput="sugerirObjetivo()">
+            <input type="number" id="altura" placeholder="Altura (cm)">
+            <p id="sugestao-objetivo" class="sugestao">Seu objetivo será sugerido automaticamente com base no peso.</p>
+            <select id="objetivo">
+                <option value="">Escolha seu objetivo</option>
+                <option value="ganhar">Ganhar massa muscular</option>
+                <option value="manter">Manter peso</option>
+                <option value="emagrecer">Emagrecer</option>
+            </select>
+            <button onclick="salvarDados()">Gerar Dieta</button>
+        </div>
+
+        <!-- Dieta -->
+        <div id="dieta-div" class="hidden">
+            <h2 id="boas-vindas"></h2>
+            <p id="info-objetivo"></p>
+            <div id="cards" class="cards-container"></div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
